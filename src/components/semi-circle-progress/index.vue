@@ -1,39 +1,34 @@
 <template>
   <div class="circle-progress-wrapper">
     <div class="circle-progress">
-      <svg
-        class="circle-progress-bar"
-        :width="2 * r + strokeWidth"
-        :viewBox="viewBox"
-        :height="2 * r + strokeWidth"
-      >
-        <!-- #ffcaca -->
-        <circle
-          :cx="r"
-          :cy="r"
-          :r="r"
+      <svg :viewBox="viewBox" :width="2 * r + strokeWidth">
+        <path
+          fill="#fff"
+          fill-opacity="0"
+          :stroke-width="6"
+          :stroke-linecap="strokeLinecap"
           :stroke="strokeBgColor"
+          :d="pathD"
+        />
+        <path
+          class="circle-progress"
+          fill="#fff"
+          fill-opacity="0"
+          :style="aboveCircleStyle"
           :stroke-width="strokeWidth"
           :stroke-linecap="strokeLinecap"
-          fill="none"
-        />
-        <circle
-          :cx="r"
-          :cy="r"
-          :r="r"
-          :style="aboveCircleStyle"
           :stroke="strokeColor"
           :stroke-dasharray="dasharray"
-          :stroke-width="strokeWidth"
           :stroke-dashoffset="dashoffset"
-          :stroke-linecap="strokeLinecap"
-          fill="none"
+          :d="pathD"
         />
       </svg>
       <!-- 内容 -->
       <div class="progress-content">
         <slot>
-          <div class="percent-text">{{ percentage }} %</div>
+          <div class="inner-default-percentage">
+            {{ percentage }}<span class="percentage-symbol">%</span>
+          </div>
         </slot>
       </div>
     </div>
@@ -41,22 +36,22 @@
 </template>
 <script>
 export default {
-  name: "svg-circle-progress",
+  name: "semi-circle-progress",
   data() {
     return {};
   },
   props: {
     percentage: {
       type: Number,
-      default: 10
+      default: 0
     },
     r: {
       type: Number,
-      default: 50
+      default: 80
     },
     strokeWidth: {
       type: Number,
-      default: 5
+      default: 6
     },
     bgColor: {
       type: String,
@@ -80,21 +75,32 @@ export default {
     }
   },
   computed: {
+    pathD() {
+      let radius = this.r;
+      let d = `M${radius * 2} ${radius} A${radius} ${radius} 0 0 0 0 ${radius}`;
+      return d;
+    },
     viewBox() {
       let cx = this.strokeWidth / 2;
       let cy = this.strokeWidth / 2;
       let w = 2 * this.r + this.strokeWidth;
-      let h = w;
+      let h = this.r + this.strokeWidth;
       return `-${cx} -${cy} ${w} ${h}`;
     },
+    leftCircleStyle() {
+      return {
+        "stroke-width": this.strokeWidth
+      };
+    },
     dasharray() {
-      let l = 3.14 * 2 * this.r;
+      let l = (3.14 * 2 * this.r) / 2;
       return `${l}`;
     },
     dashoffset() {
-      let offset = this.dasharray * (this.percentage / 100) + 3.14 * this.r * 2;
-      console.log("offset", offset);
-      return `${-offset}`;
+      let offset =
+        this.dasharray * (this.percentage / 100) + (3.14 * 2 * this.r) / 2;
+      console.log(offset);
+      return `${offset}`;
     },
     aboveCircleStyle() {
       return {
@@ -106,28 +112,26 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .circle-progress-wrapper {
   .circle-progress {
     position: relative;
     display: flex;
     justify-content: center;
 
-    .circle-progress-bar {
-      transform: rotate(-90deg);
-    }
-
     .progress-content {
       position: absolute;
+      width: 100%;
+      height: 100%;
       left: 50%;
       transform: translateX(-50%);
 
-      .percent-text {
+      .inner-default-percentage {
         height: 100%;
-        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 16px;
       }
     }
   }
