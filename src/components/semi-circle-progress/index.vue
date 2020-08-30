@@ -36,9 +36,9 @@
 </template>
 <script>
 export default {
-  name: "semi-circle-progress",
+  name: 'semi-circle-progress',
   data() {
-    return {};
+    return {}
   },
   props: {
     percentage: {
@@ -55,19 +55,19 @@ export default {
     },
     bgColor: {
       type: String,
-      default: "#ffcaca"
+      default: '#ffcaca'
     },
     strokeBgColor: {
       type: String,
-      default: "#ffcaca"
+      default: '#ffcaca'
     },
     strokeColor: {
       type: String,
-      default: "#e57d4b"
+      default: '#e57d4b'
     },
     strokeLinecap: {
       type: String,
-      default: "round"
+      default: 'round'
     },
     duration: {
       type: Number,
@@ -76,40 +76,39 @@ export default {
   },
   computed: {
     pathD() {
-      let radius = this.r;
-      let d = `M${radius * 2} ${radius} A${radius} ${radius} 0 0 0 0 ${radius}`;
-      return d;
+      let radius = this.r
+      let d = `M${radius * 2} ${radius} A${radius} ${radius} 0 0 0 0 ${radius}`
+      return d
     },
     viewBox() {
-      let cx = this.strokeWidth / 2;
-      let cy = this.strokeWidth / 2;
-      let w = 2 * this.r + this.strokeWidth;
-      let h = this.r + this.strokeWidth;
-      return `-${cx} -${cy} ${w} ${h}`;
+      let cx = this.strokeWidth / 2
+      let cy = this.strokeWidth / 2
+      let w = 2 * this.r + this.strokeWidth
+      let h = this.r + this.strokeWidth
+      return `-${cx} -${cy} ${w} ${h}`
     },
     leftCircleStyle() {
       return {
-        "stroke-width": this.strokeWidth
-      };
+        'stroke-width': this.strokeWidth
+      }
     },
     dasharray() {
-      let l = (3.14 * 2 * this.r) / 2;
-      return `${l}`;
+      let l = (3.14 * 2 * this.r) / 2
+      return `${l}`
     },
     dashoffset() {
       let offset =
-        this.dasharray * (this.percentage / 100) + (3.14 * 2 * this.r) / 2;
-      console.log(offset);
-      return `${offset}`;
+        this.dasharray * (this.percentage / 100) + (3.14 * 2 * this.r) / 2
+      return `${offset}`
     },
     aboveCircleStyle() {
       return {
         transition: `all ${this.duration}s ease-in-out`
-      };
+      }
     }
   },
   methods: {}
-};
+}
 </script>
 
 <style lang="scss">

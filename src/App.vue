@@ -14,15 +14,15 @@
 </template>
 
 <script>
-import CircleProgress from "./components/circle-progress";
-import SemiCircleProgress from "./components/semi-circle-progress";
+import CircleProgress from './components/circle-progress'
+import SemiCircleProgress from './components/semi-circle-progress'
 
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
       percentage: 10
-    };
+    }
   },
   components: {
     CircleProgress,
@@ -30,10 +30,10 @@ export default {
   },
   methods: {
     changeProgrss() {
-      this.percentage += 10;
+      this.percentage += 10
     }
   }
-};
+}
 </script>
 
 <style lang="scss">
