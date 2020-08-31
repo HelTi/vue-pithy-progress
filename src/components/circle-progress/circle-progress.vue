@@ -41,7 +41,7 @@
 </template>
 <script>
 export default {
-  name: 'svg-circle-progress',
+  name: 'circle-progress',
   data() {
     return {}
   },

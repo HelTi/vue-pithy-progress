@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import CircleProgress from './components/circle-progress'
-import SemiCircleProgress from './components/semi-circle-progress'
+import CircleProgress from '../../components/circle-progress/circle-progress'
+import SemiCircleProgress from '../../components/semi-circle-progress/semi-circle-progress'
 
 export default {
   name: 'App',
