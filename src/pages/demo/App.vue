@@ -1,7 +1,18 @@
 <template>
   <div id="app">
     <div class="con">
-      <circle-progress :percentage="percentage"> </circle-progress>
+      <circle-progress
+        :bgColor="circleBgColor"
+        :strokeBgColor="circleStrokeBgColor"
+        :strokeColor="circleStrokeColor"
+        :percentage="percentage"
+        :r="circelRadius"
+        :strokeWidth="10"
+      >
+        <div style="padding-top:20px;">
+          自定义内容
+        </div>
+      </circle-progress>
     </div>
     <div>
       <semi-circle-progress :percentage="percentage" />
@@ -20,7 +31,11 @@ export default {
   name: 'App',
   data() {
     return {
-      percentage: 10
+      percentage: 10,
+      circleBgColor: '#ffffff',
+      circleStrokeBgColor: '#7d7159',
+      circleStrokeColor: '#eaac37',
+      circelRadius: 80
     }
   },
   components: { semiCircleProgress },

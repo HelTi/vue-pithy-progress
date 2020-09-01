@@ -3,8 +3,7 @@
     <div class="circle-progress">
       <svg :viewBox="viewBox" :width="2 * r + strokeWidth">
         <path
-          fill="#fff"
-          fill-opacity="0"
+          :fill="bgColor"
           :stroke-width="6"
           :stroke-linecap="strokeLinecap"
           :stroke="strokeBgColor"
@@ -12,7 +11,6 @@
         />
         <path
           class="circle-progress"
-          fill="#fff"
           fill-opacity="0"
           :style="aboveCircleStyle"
           :stroke-width="strokeWidth"
@@ -55,7 +53,7 @@ export default {
     },
     bgColor: {
       type: String,
-      default: '#ffcaca'
+      default: '#ffffff'
     },
     strokeBgColor: {
       type: String,
@@ -98,7 +96,9 @@ export default {
     },
     dashoffset() {
       let offset =
-        this.dasharray * (this.percentage / 100) + (3.14 * 2 * this.r) / 2
+        this.dasharray *
+          ((this.percentage > 100 ? 100 : this.percentage) / 100) +
+        (3.14 * 2 * this.r) / 2
       return `${offset}`
     },
     aboveCircleStyle() {

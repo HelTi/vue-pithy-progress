@@ -15,7 +15,7 @@
           :stroke="strokeBgColor"
           :stroke-width="strokeWidth"
           :stroke-linecap="strokeLinecap"
-          fill="none"
+          :fill="bgColor"
         />
         <circle
           :cx="r"
@@ -60,7 +60,7 @@ export default {
     },
     bgColor: {
       type: String,
-      default: '#ffcaca'
+      default: '#ffffff'
     },
     strokeBgColor: {
       type: String,
@@ -92,7 +92,10 @@ export default {
       return `${l}`
     },
     dashoffset() {
-      let offset = this.dasharray * (this.percentage / 100) + 3.14 * this.r * 2
+      let offset =
+        this.dasharray *
+          ((this.percentage > 100 ? 100 : this.percentage) / 100) +
+        3.14 * this.r * 2
       return `${-offset}`
     },
     aboveCircleStyle() {

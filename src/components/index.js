@@ -1,5 +1,5 @@
-import circleProgress from './circle-progress/circle-progress.vue'
-import semiCircleProgress from './semi-circle-progress/semi-circle-progress.vue'
+import circleProgress from './circle-progress'
+import semiCircleProgress from './semi-circle-progress'
 
 const install = function(Vue) {
   let components = [circleProgress, semiCircleProgress]

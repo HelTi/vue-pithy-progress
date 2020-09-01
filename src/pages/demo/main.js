@@ -1,12 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-// import AwSomeProgress from '@/components/index.js'
+import AwSomeProgress from '@/components/index.js'
 
-// Vue.use(AwSomeProgress)
-
-import CircleProgress from '@/components/circle-progress'
-Vue.use(CircleProgress)
+Vue.use(AwSomeProgress)
 
 Vue.config.productionTip = false
 
