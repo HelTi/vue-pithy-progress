@@ -6,6 +6,9 @@
     <div>
       <semi-circle-progress :percentage="percentage" />
     </div>
+    <div style="width:220px; margin-top:60px;">
+      <progress-bar :percentage="percentage" />
+    </div>
 
     <div class="btn-wrapper">
       <button @click="changeProgrss">进度</button>
@@ -16,6 +19,7 @@
 <script>
 import CircleProgress from '../../components/circle-progress'
 import SemiCircleProgress from '../../components/semi-circle-progress'
+import ProgressBar from '../../components/progress-bar'
 
 export default {
   name: 'App',
@@ -26,7 +30,8 @@ export default {
   },
   components: {
     CircleProgress,
-    SemiCircleProgress
+    SemiCircleProgress,
+    ProgressBar
   },
   methods: {
     changeProgrss() {
