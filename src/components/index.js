@@ -17,7 +17,7 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export { circleProgress, semiCircleProgress }
+export { circleProgress, semiCircleProgress, progressBar }
 
 export default {
   install: install

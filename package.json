@@ -10,6 +10,21 @@
     "build:lib": "node ./build/build-components.js",
     "lint": "vue-cli-service lint"
   },
+  "files": [
+    "dist",
+    "lib",
+    "src/components"
+  ],
+  "keywords": [
+    "vue",
+    "progress",
+    "progress bar",
+    "circle progress",
+    "semi circle progress"
+  ],
+  "jsnext:main": "dist/vue-awesome-progress.umd.min.js",
+  "author": "helti",
+  "license": "MIT",
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
@@ -26,5 +41,9 @@
     "shelljs": "^0.8.4",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/HelTi/vue-awsome-progress/issues"
+  },
+  "homepage": "https://github.com/HelTi/vue-awsome-progress#readme"
 }
