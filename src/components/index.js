@@ -1,8 +1,9 @@
 import circleProgress from './circle-progress'
 import semiCircleProgress from './semi-circle-progress'
+import progressBar from './progress-bar'
 
 const install = function(Vue) {
-  let components = [circleProgress, semiCircleProgress]
+  let components = [circleProgress, semiCircleProgress, progressBar]
   components.forEach(function(item) {
     if (item.install) {
       Vue.use(item)
