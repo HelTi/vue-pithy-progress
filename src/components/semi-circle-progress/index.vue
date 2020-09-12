@@ -1,5 +1,5 @@
 <template>
-  <div class="circle-progress-wrapper">
+  <div class="a-circle-progress-wrapper">
     <div class="circle-progress">
       <svg :viewBox="viewBox" :width="2 * r + strokeWidth">
         <path
@@ -112,7 +112,7 @@ export default {
 </script>
 
 <style lang="scss">
-.circle-progress-wrapper {
+.a-circle-progress-wrapper {
   .circle-progress {
     position: relative;
     display: flex;

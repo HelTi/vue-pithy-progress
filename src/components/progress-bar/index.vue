@@ -1,8 +1,12 @@
 <template>
-  <div class="progress-bar-wrapper" :style="wrapperStyle">
+  <div class="a-progress-bar-wrapper" :style="wrapperStyle">
     <div class="progress-outside" :style="outsideStyle">
       <div class="progress-inner" :style="innerBarStyle">
-        <div class="progress-value">{{ percentage }}%</div>
+        <slot>
+          <div v-if="showTopTip" :style="tipStyle" class="bar-tip">
+            {{ percentage }}%
+          </div>
+        </slot>
       </div>
     </div>
   </div>
@@ -26,32 +30,60 @@ export default {
     width: {
       type: String,
       default: '100%'
+    },
+    bgColor: {
+      type: String,
+      default: '#ffcaca'
+    },
+    color: {
+      type: String,
+      default: '#e57d4b'
+    },
+    showTopTip: {
+      type: Boolean,
+      default: true
+    },
+    tipBgColor: {
+      type: String,
+      default: '#ffcaca'
+    },
+    tipFontColor: {
+      type: String,
+      default: '#ff445a'
     }
   },
   computed: {
     innerBarStyle() {
       return {
-        width: this.percentage + '%',
+        width: (this.percentage > 100 ? 100 : this.percentage) + '%',
         height: this.height + this.unit,
-        'border-radius': (this.height / 2).toFixed(2) + this.unit
+        'border-radius': (this.height / 2).toFixed(2) + this.unit,
+        background: this.color
       }
     },
     outsideStyle() {
       return {
         height: this.height + this.unit,
-        'border-radius': (this.height / 2).toFixed(2) + this.unit
+        'border-radius': (this.height / 2).toFixed(2) + this.unit,
+        background: this.bgColor
       }
     },
     wrapperStyle() {
       return {
         width: this.width
       }
+    },
+    tipStyle() {
+      return {
+        color: this.tipFontColor,
+        background: this.tipBgColor
+      }
     }
   }
 }
 </script>
-<style lang="scss" scoped>
-.progress-bar-wrapper {
+<style lang="scss">
+.a-progress-bar-wrapper {
   position: relative;
   overflow: visible;
   font-size: 11px;
@@ -69,30 +101,14 @@ export default {
 
   .progress-outside {
     width: 100%;
-    background: #ffcaca;
     position: relative;
     overflow: visible;
-    // padding: 1px;
 
     .progress-inner {
-      // background-image: linear-gradient(
-      //   45deg,
-      //   rgba(255, 255, 255, 0.15) 25%,
-      //   transparent 25%,
-      //   transparent 50%,
-      //   rgba(255, 255, 255, 0.15) 50%,
-      //   rgba(255, 255, 255, 0.15) 75%,
-      //   transparent 75%,
-      //   transparent
-      // );
-      background: #e57d4b;
-      // background-size: 40px 40px;
       transition: all 0.3s ease-in;
       position: relative;
 
-      // animation: progress-animation 12s infinite linear;
-
-      .progress-value {
+      .bar-tip {
         display: block;
         width: 75px;
         height: 25px;
@@ -100,10 +116,7 @@ export default {
         border-radius: 12.5px;
         text-align: center;
         font-size: 13px;
-        color: #fff;
         border-radius: 4px;
-        background: #ffcaca;
-        color: #ff445a;
         position: absolute;
         top: -40px;
         right: -18px;

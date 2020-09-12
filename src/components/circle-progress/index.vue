@@ -1,5 +1,5 @@
 <template>
-  <div class="circle-progress-wrapper">
+  <div class="a-circle-progress-wrapper">
     <div class="circle-progress">
       <svg
         class="circle-progress-bar"
@@ -33,7 +33,7 @@
       <!-- 内容 -->
       <div class="progress-content">
         <slot>
-          <div class="percent-text">{{ percentage }} %</div>
+          <div class="percent-text">{{ percentage }}%</div>
         </slot>
       </div>
     </div>
@@ -108,8 +108,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.circle-progress-wrapper {
+<style lang="scss">
+.a-circle-progress-wrapper {
   .circle-progress {
     position: relative;
     display: flex;

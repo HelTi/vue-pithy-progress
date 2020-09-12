@@ -3,14 +3,14 @@
     <div class="con">
       <circle-progress :percentage="percentage"> </circle-progress>
     </div>
-    <div>
+    <div style="margin-top:10px;">
       <semi-circle-progress :percentage="percentage" />
     </div>
     <div style="width:220px; margin-top:60px;">
       <progress-bar :percentage="percentage" />
     </div>
 
-    <div class="btn-wrapper">
+    <div class="btn-wrapper" style="margin-top:10px;">
       <button @click="changeProgrss">进度</button>
     </div>
   </div>
