@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import AwSomeProgress from '@/components/index.js'
+import VuePithyProgress from '@/components/index.js'
 
-Vue.use(AwSomeProgress)
+Vue.use(VuePithyProgress)
 
 Vue.config.productionTip = false
 

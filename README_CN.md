@@ -8,14 +8,14 @@
  [English](./README.md)|中文
 ## 安装
 ```bash
-npm install vue-awesome-progress
+npm install vue-pithy-progress
 ```
 
 ## 使用
 ### 全局注册
 ```bash
-import AweSomeProgress from 'vue-awesome-progress'
-Vue.use(AweSomeProgress)
+import VuePithyProgress from 'vue-pithy-progress'
+Vue.use(VuePithyProgress)
 
 <circle-progress :percentage="percentage"> </circle-progress>
 
@@ -26,8 +26,8 @@ Vue.use(AweSomeProgress)
 ```
 ### 引入单个组件
 ```bash
-import semiCircleProgress from 'vue-awesome-progress/lib/semi-circle-progress.umd.min.js'
-import 'vue-awesome-progress/lib/semi-circle-progress.css'
+import semiCircleProgress from 'vue-pithy-progress/lib/semi-circle-progress.umd.min.js'
+import 'vue-pithy-progress/lib/semi-circle-progress.css'
 
 <semi-circle-progress :percentage="percentage" />
 

@@ -9,14 +9,14 @@ Progress bar component for Vue.js(2.x). This project contains three common compo
 English|[中文](./README_CN.md)
 ## Installation
 ```bash
-npm install vue-awesome-progress
+npm install vue-pithy-progress
 ```
 
 ## Usage
 ### Global registration
 ```bash
-import AweSomeProgress from 'vue-awesome-progress'
-Vue.use(AweSomeProgress)
+import VuePithyProgress from 'vue-pithy-progress'
+Vue.use(VuePithyProgress)
 
 <circle-progress :percentage="percentage"> </circle-progress>
 
@@ -27,8 +27,8 @@ Vue.use(AweSomeProgress)
 ```
 ### Use single component
 ```bash
-import semiCircleProgress from 'vue-awesome-progress/lib/semi-circle-progress.umd.min.js'
-import 'vue-awesome-progress/lib/semi-circle-progress.css'
+import semiCircleProgress from 'vue-pithy-progress/lib/semi-circle-progress.umd.min.js'
+import 'vue-pithy-progress/lib/semi-circle-progress.css'
 
 <semi-circle-progress :percentage="percentage" />
 
