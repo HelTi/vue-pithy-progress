@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["vue-awsome-progress"] = factory();
+		exports["vue-awesome-progress"] = factory();
 	else
-		root["vue-awsome-progress"] = factory();
+		root["vue-awesome-progress"] = factory();
 })((typeof self !== 'undefined' ? self : this), function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -2111,6 +2111,7 @@ __webpack_require__.r(__webpack_exports__);
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, "circleProgress", function() { return /* reexport */ circle_progress; });
 __webpack_require__.d(__webpack_exports__, "semiCircleProgress", function() { return /* reexport */ semi_circle_progress; });
+__webpack_require__.d(__webpack_exports__, "progressBar", function() { return /* reexport */ progress_bar; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -2763,4 +2764,4 @@ module.exports = NATIVE_SYMBOL
 
 /******/ })["default"];
 });
-//# sourceMappingURL=vue-awsome-progress.umd.js.map
+//# sourceMappingURL=vue-awesome-progress.umd.js.map

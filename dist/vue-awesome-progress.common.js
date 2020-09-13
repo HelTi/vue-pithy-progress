@@ -2102,6 +2102,7 @@ __webpack_require__.r(__webpack_exports__);
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, "circleProgress", function() { return /* reexport */ circle_progress; });
 __webpack_require__.d(__webpack_exports__, "semiCircleProgress", function() { return /* reexport */ semi_circle_progress; });
+__webpack_require__.d(__webpack_exports__, "progressBar", function() { return /* reexport */ progress_bar; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -2753,4 +2754,4 @@ module.exports = NATIVE_SYMBOL
 /***/ })
 
 /******/ })["default"];
-//# sourceMappingURL=vue-awsome-progress.common.js.map
+//# sourceMappingURL=vue-awesome-progress.common.js.map

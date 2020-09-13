@@ -6,7 +6,7 @@
   "unpkg": "dist/vue-awesome-progress.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-awsome-progress src/components/index.js",
+    "build": "vue-cli-service build --target lib --name vue-awesome-progress src/components/index.js",
     "build:lib": "node ./build/build-components.js",
     "lint": "vue-cli-service lint"
   },
