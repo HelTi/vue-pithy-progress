@@ -43,7 +43,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "bugs": {
-    "url": "https://github.com/HelTi/vue-awsome-progress/issues"
+    "url": "https://github.com/HelTi/vue-pithy-progress/issues"
   },
-  "homepage": "https://github.com/HelTi/vue-awsome-progress#readme"
+  "homepage": "https://github.com/HelTi/vue-pithy-progress#readme"
 }

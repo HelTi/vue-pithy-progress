@@ -16,6 +16,7 @@ npm install vue-pithy-progress
 ### Global registration
 ```bash
 import VuePithyProgress from 'vue-pithy-progress'
+import 'vue-pithy-progress/dist/vue-pithy-progress.css'
 Vue.use(VuePithyProgress)
 
 <circle-progress :percentage="percentage"> </circle-progress>
