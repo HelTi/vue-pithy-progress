@@ -1,4 +1,4 @@
-# vue-awsome-progress
+# vue-pithy-progress
 
 Progress bar component for Vue.js(2.x). This project contains three common components（circle-progress、semi-circle-progres、progress-bar）uses SVG to show progress.
 

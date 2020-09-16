@@ -118,7 +118,7 @@ export default {
         font-size: 13px;
         border-radius: 4px;
         position: absolute;
-        top: -40px;
+        top: -34px;
         right: -18px;
 
         &::after {

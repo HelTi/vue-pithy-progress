@@ -2526,12 +2526,12 @@ var semi_circle_progress_component = normalizeComponent(
 )
 
 /* harmony default export */ var semi_circle_progress = (semi_circle_progress_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a4391e3a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/progress-bar/index.vue?vue&type=template&id=00f2fada&
-var progress_barvue_type_template_id_00f2fada_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"a-progress-bar-wrapper",style:(_vm.wrapperStyle)},[_c('div',{staticClass:"progress-outside",style:(_vm.outsideStyle)},[_c('div',{staticClass:"progress-inner",style:(_vm.innerBarStyle)},[_vm._t("default",[(_vm.showTopTip)?_c('div',{staticClass:"bar-tip",style:(_vm.tipStyle)},[_vm._v(" "+_vm._s(_vm.percentage)+"% ")]):_vm._e()])],2)])])}
-var progress_barvue_type_template_id_00f2fada_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"a4391e3a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/progress-bar/index.vue?vue&type=template&id=bd014c02&
+var progress_barvue_type_template_id_bd014c02_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"a-progress-bar-wrapper",style:(_vm.wrapperStyle)},[_c('div',{staticClass:"progress-outside",style:(_vm.outsideStyle)},[_c('div',{staticClass:"progress-inner",style:(_vm.innerBarStyle)},[_vm._t("default",[(_vm.showTopTip)?_c('div',{staticClass:"bar-tip",style:(_vm.tipStyle)},[_vm._v(" "+_vm._s(_vm.percentage)+"% ")]):_vm._e()])],2)])])}
+var progress_barvue_type_template_id_bd014c02_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/progress-bar/index.vue?vue&type=template&id=00f2fada&
+// CONCATENATED MODULE: ./src/components/progress-bar/index.vue?vue&type=template&id=bd014c02&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.number.to-fixed.js
 var es_number_to_fixed = __webpack_require__("b680");
@@ -2637,8 +2637,8 @@ var progress_barvue_type_style_index_0_lang_scss_ = __webpack_require__("9fda");
 
 var progress_bar_component = normalizeComponent(
   components_progress_barvue_type_script_lang_js_,
-  progress_barvue_type_template_id_00f2fada_render,
-  progress_barvue_type_template_id_00f2fada_staticRenderFns,
+  progress_barvue_type_template_id_bd014c02_render,
+  progress_barvue_type_template_id_bd014c02_staticRenderFns,
   false,
   null,
   null,
